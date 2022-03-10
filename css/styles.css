@@ -679,9 +679,6 @@ button {
 .project-thumb:hover .project-description {
   opacity: 1;
 }
-/* .card-img-project:hover .project-thumb {
-  background-color: #2196f3;
-} */
 
 .project-thumb::before {
   display: inline-block;
