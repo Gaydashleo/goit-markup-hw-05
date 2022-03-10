@@ -20,6 +20,7 @@
   --customers-color-icon: #afb1b8;
   --text-under-job-item: #ffffff;
   --under-job-item-bg: #2f303a80;
+  --portfolio-text-description: #ffffff;
 }
 body {
   background-color: var(#ffffff);
@@ -651,6 +652,48 @@ button {
   line-height: 1.88;
 
   color: var(--primary-text-color);
+}
+.project-thumb {
+  position: relative;
+}
+.portfolio-description {
+  display: flex;
+}
+.project-description {
+  display: flex;
+  width: 322px;
+  height: 168px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: var(--primary-text-color);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--portfolio-text-description);
+}
+.project-thumb:hover .project-description {
+  opacity: 1;
+}
+/* .card-img-project:hover .project-thumb {
+  background-color: #2196f3;
+} */
+
+.project-thumb::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  opacity: 0;
+}
+.project-thumb:hover::before {
+  opacity: 1;
 }
 
 /*======= PROJECT END ======= */
