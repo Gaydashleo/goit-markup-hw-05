@@ -18,6 +18,8 @@
   --shadow-team: #00000025;
   --card-team-bg: #ffffff;
   --customers-color-icon: #afb1b8;
+  --text-under-job-item: #ffffff;
+  --under-job-item-bg: #2f303a80;
 }
 body {
   background-color: var(#ffffff);
@@ -293,6 +295,28 @@ p {
   text-align: center;
 
   color: var(--title-text-color);
+}
+.img-job-item {
+  position: relative;
+}
+.under-job-item {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+  height: 70px;
+  background-color: var(--under-job-item-bg);
+}
+.text-under-job-item {
+  font-family: Roboto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 11.17;
+  text-align: center;
+  color: var(--text-under-job-item);
 }
 
 /*======= OUR JOB END =======*/
