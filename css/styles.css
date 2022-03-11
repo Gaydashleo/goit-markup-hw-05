@@ -21,6 +21,7 @@
   --text-under-job-item: #ffffff;
   --under-job-item-bg: #2f303a80;
   --portfolio-text-description: #ffffff;
+  --modal-background-color: #ffffff;
 }
 body {
   background-color: var(#ffffff);
@@ -222,6 +223,29 @@ p {
 .button-hero:focus {
   background-color: var(--button-hover-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.125);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+
+  background-color: var(--modal-background-color);
 }
 /*======= HERO END=======*/
 
