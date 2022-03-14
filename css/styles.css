@@ -22,6 +22,7 @@
   --under-job-item-bg: #2f303a80;
   --portfolio-text-description: #ffffff;
   --modal-background-color: #ffffff;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   background-color: var(#ffffff);
@@ -91,7 +92,8 @@ p {
   color: var(--accent-color);
 }
 .nav-menu {
-  /* position: absolute; */
+  right: 853px;
+  bottom: 0;
   display: flex;
   align-items: center;
   width: 294px;
@@ -104,11 +106,9 @@ p {
 .site-nav-item:not(:last-child) {
   margin-right: 50px;
 }
-.site-nav-item {
-  position: relative;
-}
+
 .nav-link {
-  /* position: relative; */
+  position: relative;
   display: flex;
 
   font-weight: 500;
@@ -140,28 +140,16 @@ p {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
+
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* .nav-link:hover::after,
+.nav-link:hover::after,
 .nav-link:focus::after {
   color: var(--accent-color);
-} */
-/* .nav-text {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-
-  color: var(--title-text-color);
+  opacity: 1;
 }
 
-.nav-text:active {
-  color: var(--accent-color);
-}
-.nav-text:hover,
-.nav-text:focus {
-  color: var(--accent-color);
-} */
 .mail-top-line {
   display: flex;
   margin-left: auto;
@@ -188,6 +176,7 @@ p {
 .mail-top:hover,
 .mail-top:focus {
   color: var(--accent-color);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .tel-top {
   display: flex;
@@ -205,7 +194,14 @@ p {
 .tel-top:hover,
 .tel-top:focus {
   color: var(--accent-color);
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* .tel-top:hover::after,
+.tel-top:focus::after {
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} */
 /*======= TOP LINE END=======*/
 
 /*======= HERO START =======*/
